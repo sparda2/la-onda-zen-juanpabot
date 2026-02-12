@@ -1,4 +1,4 @@
-# 🚀 Instrucciones Rápidas - Insertar en WordPress / GoHighLevel
+# 🚀 Instrucciones Rápidas - VSL Versión 2
 
 ## WordPress
 

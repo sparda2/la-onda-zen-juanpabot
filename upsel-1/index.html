@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>UpSell - Código Genio</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');">
+    
+    <link rel="preload" href="https://scripts.converteai.net/4747f559-716b-4de7-a2dc-c9d56f7fc903/players/691fe1283752bd8e798e808f/v4/player.js" as="script">
+    <link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
+    <link rel="preload" href="https://cdn.converteai.net/4747f559-716b-4de7-a2dc-c9d56f7fc903/691fe1075c8042a2b56c1fe2/main.m3u8" as="fetch">
+    <link rel="dns-prefetch" href="https://cdn.converteai.net">
+    <link rel="dns-prefetch" href="https://scripts.converteai.net">
+    <link rel="dns-prefetch" href="https://api.vturb.com.br">
+    <link rel="dns-prefetch" href="https://checkout.hotmart.com">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        body {
+            font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background-color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+            color: #333;
+        }
+        
+        .page-container {
+            width: 100%;
+            max-width: 100%;
+            background-color: #ffffff;
+        }
+        
+        /* Header section - Dark blue background */
+        .header-section {
+            padding: 3vh 20vw 3vh 20vw;
+            background-color: #00389f;
+            width: 100%;
+        }
+        
+        .header-headline h1 {
+            font-size: 1.98vw;
+            text-align: center;
+            padding-top: 2vh;
+            padding-bottom: 2vh;
+            color: #ffffff;
+            line-height: 1.1;
+            font-weight: 800;
+            margin: 0;
+        }
+        
+        /* Content section */
+        .content-section {
+            padding: 1vh 20vw 1vh 20vw;
+            width: 100%;
+            background-color: #ffffff;
+        }
+        
+        .content-section h2 {
+            font-size: 1.65vw;
+            text-align: center;
+            padding-top: 2vh;
+            padding-bottom: 2vh;
+            color: #000000;
+            line-height: 1.1;
+            font-weight: 700;
+            margin: 0;
+        }
+        
+        .content-section h3 {
+            font-size: 1.65vw;
+            text-align: center;
+            padding-top: 0;
+            padding-bottom: 2vh;
+            color: #000000;
+            line-height: 1.1;
+            font-weight: 300;
+            margin: 0;
+        }
+        
+        .image-block {
+            text-align: center;
+            margin: 2vh auto;
+        }
+        
+        .image-block img {
+            display: block;
+            margin: 0.25vh auto;
+            max-width: 60%;
+            border-radius: 0;
+            border: none;
+            height: auto;
+        }
+        
+        .video-wrapper {
+            width: 100%;
+            max-width: 400px;
+            margin: 2vh auto;
+            display: block;
+        }
+        
+        vturb-smartplayer {
+            display: block !important;
+            width: 100% !important;
+        }
+        
+        /* Upsell section - Hidden by default */
+        .upsell-section {
+            padding: 3vh 20vw 3vh 20vw;
+            width: 100%;
+            background-color: #ffffff;
+            display: none;
+        }
+        
+        .upsell-section h2 {
+            font-size: 1.65vw;
+            text-align: center;
+            padding-top: 0;
+            padding-bottom: 2vh;
+            color: #000bff;
+            line-height: 1.1;
+            font-weight: 700;
+            margin: 0;
+        }
+        
+        /* Hotmart Sales Funnel */
+        .hotmart-container {
+            padding: 1vh 20vw 1vh 20vw;
+            width: 100%;
+            background-color: #ffffff;
+        }
+        
+        #hotmart-sales-funnel {
+            display: block;
+            margin: 0 auto;
+        }
+        
+        @media (max-width: 1200px) {
+            .header-section {
+                padding: 2.25vh 15vw 2.25vh 15vw;
+            }
+            
+            .content-section {
+                padding: 0.75vh 15vw 0.75vh 15vw;
+            }
+            
+            .content-section h2 {
+                font-size: 2.5vw;
+                padding-top: 1.5vh;
+                padding-bottom: 1.5vh;
+            }
+            
+            .content-section h3 {
+                font-size: 2.5vw;
+                padding-top: 0;
+                padding-bottom: 1.5vh;
+            }
+            
+            .header-headline h1 {
+                font-size: 3vw;
+                padding-top: 1.5vh;
+                padding-bottom: 1.5vh;
+            }
+            
+            .image-block img {
+                max-width: 54%;
+            }
+            
+            .upsell-section {
+                padding: 2.25vh 15vw 2.25vh 15vw;
+            }
+            
+            .hotmart-container {
+                padding: 0.75vh 15vw 0.75vh 15vw;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            html { overflow-x: hidden; }
+            
+            .header-section {
+                padding: 1.5vh 1.5vw 1.5vh 1.5vw;
+            }
+            
+            .content-section {
+                padding: 1.5vh 1.5vw 1.5vh 1.5vw;
+            }
+            
+            .content-section h2 {
+                font-size: 4.5vw;
+                padding-top: 1.5vh;
+                padding-bottom: 1.5vh;
+            }
+            
+            .content-section h3 {
+                font-size: 4.5vw;
+                padding-top: 0;
+                padding-bottom: 1.5vh;
+            }
+            
+            .header-headline h1 {
+                font-size: 4.5vw;
+                padding-top: 1.5vh;
+                padding-bottom: 1.5vh;
+            }
+            
+            .image-block img {
+                max-width: 80%;
+            }
+            
+            .upsell-section {
+                padding: 0.001vh 1.5vw 0.001vh 1.5vw;
+            }
+            
+            .hotmart-container {
+                padding: 1.5vh 1.5vw 1.5vh 1.5vw;
+            }
+        }
+        
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+<body class="page-container">
+    
+    <!-- Header Warning -->
+    <div class="header-section">
+        <div class="header-headline">
+            <h1>¡No cierres ni actualices esta página, ya que pueden ocurrir errores mientras procesamos el pago!</h1>
+        </div>
+    </div>
+    
+    <!-- Processing Payment Section -->
+    <div class="content-section">
+        <h3>Estamos procesando su pago</h3>
+        
+        <div class="image-block">
+            <img loading="lazy" src="https://media.atomicatpages.net/u/wGdxtageg6ehx6YIDoo8fZ0DIMa2/Pictures/cpbDSG1646103.webp" alt="Procesando pago">
+        </div>
+        
+        <h2>¡TENGO UNA INFORMACIÓN REALMENTE IMPORTANTE PARA TI!</h2>
+        <h2 style="font-size: 1.65vw; color: #000;">Haz clic para escuchar mientras se libera tu acceso👇</h2>
+        
+        <div class="video-wrapper">
+            <vturb-smartplayer id="vid-691fe1283752bd8e798e808f"></vturb-smartplayer>
+        </div>
+    </div>
+    
+    <!-- Upsell Section -->
+    <div class="upsell-section">
+        <h2>¡ACTIVA EL CÓDIGO GENIO PARA TU HIJO/A HOY MISMO!</h2>
+        
+        <div class="image-block">
+            <img loading="lazy" src="https://media.atomicatpages.net/u/wGdxtageg6ehx6YIDoo8fZ0DIMa2/Pictures/xSPDPw8803965.webp" alt="Código Genio">
+        </div>
+        
+        <h2>¡Click en el botón de abajo 👇 para Mejorar tu orden Ahora!</h2>
+    </div>
+    
+    <!-- Hotmart Sales Funnel -->
+    <div class="hotmart-container">
+        <div id="hotmart-sales-funnel"></div>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="https://scripts.converteai.net/4747f559-716b-4de7-a2dc-c9d56f7fc903/players/691fe1283752bd8e798e808f/v4/player.js" async defer></script>
+    <script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js" async></script>
+    
+    <!-- Meta Pixel -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1478783999895102');
+        fbq('track', 'PageView');
+        fbq('track', 'Purchase', {value: 25.60, currency: 'USD'});
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1478783999895102&ev=PageView&noscript=1">
+    </noscript>
+    
+    <!-- Hotmart Init -->
+    <script>
+        if (typeof checkoutElements !== 'undefined') {
+            checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel');
+        }
+    </script>
+
+</body>
+</html>

@@ -1,10 +1,12 @@
-# La Onda Zen - HTML Independiente
+# VSL Versión 1 - La Onda Zen
 
-Esta es una versión completamente independiente de la página de presentación de "La Onda Zen", optimizada para ser insertada en constructores como WordPress y GoHighLevel.
+Esta es la versión 1 de la página de presentación (VSL) de "La Onda Zen", optimizada para ser insertada en constructores como WordPress y GoHighLevel.
 
 ## 📁 Archivos
 
-- `index.html` - Archivo HTML completo y autocontenido
+- `index.html` - Archivo HTML completo e independiente
+- `README.md` - Documentación completa
+- `INSTRUCCIONES_RAPIDAS.md` - Guía de instalación
 
 ## 🎯 Características
 
