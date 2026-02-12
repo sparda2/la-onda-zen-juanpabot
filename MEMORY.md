@@ -17,6 +17,7 @@
 - **Timezone:** WIB (UTC+7) — Indonesia (Sorong, Bali)
 - **Location:** Currently in Raja Ampat, Sorong; moving to Denpasar, Bali tomorrow
 - **GitHub:** sparda2 (https://github.com/sparda2)
+- **GitHub Repo:** la-onda-zen-juanpabot (https://github.com/sparda2/la-onda-zen-juanpabot)
 
 ## Important Preferences
 
