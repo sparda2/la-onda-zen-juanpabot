@@ -1,81 +1,71 @@
-# 🚀 Instrucciones Rápidas - VSL Versión 1
+# ⚡ Instrucciones Rápidas - VSL v1
 
-## WordPress
+## Para WordPress
 
-### Opción 1: Bloque de HTML nativo
-1. Crea una página nueva
-2. Clic en `+` → Busca `HTML personalizado`
-3. Abre `index.html` con un editor de texto
-4. Copia TODO el contenido (Ctrl+A → Ctrl+C)
-5. Pégalo en el bloque HTML (Ctrl+V)
-6. Publica
-
-### Opción 2: Con plugin Code Snippets
-1. Instala y activa el plugin `Code Snippets`
-2. Crea un snippet nuevo
-3. Pega el contenido de `index.html`
-4. Marca como "Run everywhere"
-5. Guarda
-
----
-
-## GoHighLevel (GHL)
-
-### Pasos:
-1. Abre tu funnel o página
-2. Clic en `+ Add Element` → `Custom HTML`
-3. Abre `index.html` con un editor de texto
-4. Copia TODO el contenido (Ctrl+A → Ctrl+C)
-5. Pégalo en el editor HTML de GHL
-6. Guarda
+1. **Crear página en blanco**
+   - Dashboard → Páginas → Añadir nueva
+   - Título: "VSL v1"
+   
+2. **Cambiar a editor HTML**
+   - Click en "Código" (arriba a la derecha)
+   
+3. **Pegar contenido**
+   - Abre `index.html` con un editor de texto
+   - Copia TODO el contenido
+   - Pega en el editor HTML de WordPress
+   
+4. **Guardar y publicar**
 
 ---
 
-## Lo que incluye
+## Para GoHighLevel
 
-✅ Video con player SmartPlayer
-✅ Dos botones CTA con animaciones
-✅ Imágenes de beneficios
-✅ Footer con links
-✅ Lógica oculta intacta
-✅ Pixel de Facebook
-✅ Optimizado para mobile
+1. **Crear página en blanco**
+   - Funnel → New Page → Blank
 
----
-
-## Cambios comunes
-
-**Cambiar el link del botón:**
-Busca: `https://pay.hotmart.com/H102591687A?checkoutMode=10&hidebillet=1&src=VID18l2`
-
-Reemplaza por tu link
-
-**Cambiar las imágenes:**
-Busca: `https://media.atomicatpages.net/u/wGdxtageg6ehx6YIDoo8fZ0DIMa2/Pictures/JEzuXa7993693.webp`
-
-Reemplaza por tu URL de imagen
-
-**Cambiar el video:**
-Busca: `6933b4be44e4e1560f6e1c5c`
-
-Reemplaza por tu ID de video SmartPlayer
+2. **Añadir widget HTML**
+   - Click en "+" → Busca "HTML"
+   
+3. **Pegar el código**
+   - Copia `index.html`
+   - Pega en el widget
+   
+4. **Guardar**
 
 ---
 
-## ⚠️ Importante
+## Cambios Rápidos
 
-- El HTML es **completamente independiente**
-- No necesitas carpetas ni archivos de apoyo
-- Todo está contenido en un único archivo
-- Las imágenes/videos apuntan a los servidores originales
+### Cambiar enlace de compra
+Busca en `index.html`:
+```
+https://pay.hotmart.com/H102591687A?checkoutMode=10&hidebillet=1&src=VID18l1
+```
+Reemplaza en los 2 botones.
+
+### Cambiar texto del botón
+Busca:
+```html
+👉QUIERO ACCEDER A LA ONDA TRANQUILA
+```
+Cambia el texto.
+
+### Cambiar color del botón
+Busca:
+```css
+background:#00be00;
+```
+Usa tu color hex (#FF0000, etc.)
 
 ---
 
-## ❓ Preguntas?
+## Testing
 
-Si algo no funciona, asegúrate que:
-- ✅ Copiaste TODO el contenido del index.html
-- ✅ Lo pegaste en un elemento HTML, no en un editor de texto normal
-- ✅ El navegador puede acceder a draisabelmartinez.site (CDN)
+- Abre en navegador ✅
+- Prueba en mobile ✅
+- Hace click en botones ✅
+- Se carga el video ✅
 
-Done! 🎉
+---
+
+**¿Dudas?** Checa el README.md completo.

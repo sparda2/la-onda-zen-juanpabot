@@ -1,83 +1,97 @@
-# VSL Versión 1 - La Onda Zen
+# VSL v1 - Dra. Isabel Martínez (La Onda Tranquila)
 
-Esta es la versión 1 de la página de presentación (VSL) de "La Onda Zen", optimizada para ser insertada en constructores como WordPress y GoHighLevel.
+## Descripción
 
-## 📁 Archivos
+Página de video de ventas clonada desde `https://www.draisabelmartinez.site/ondavid18l1`
 
-- `index.html` - Archivo HTML completo e independiente
-- `README.md` - Documentación completa
-- `INSTRUCCIONES_RAPIDAS.md` - Guía de instalación
+**Características:**
+- Video player integrado (ConvertAI/Vturb)
+- Botones de CTA animados (pulsing + zooming)
+- Responsive design (mobile + desktop)
+- Footer con copyright y enlaces legales
+- Google Fonts (Roboto, Montserrat) con preload
+- Meta tags y Open Graph configurados
+- Pixel de Facebook integrado
 
-## 🎯 Características
-
-✅ **Completamente independiente** - No requiere carpetas de apoyo ni archivos externos (excepto CDN)
-✅ **Optimizado para mobile** - Responsive en todos los tamaños de pantalla
-✅ **Carga ultrarrápida** - CSS inline, preload de recursos críticos
-✅ **Lógica oculta intacta** - Mantiene la lógica de JavaScript ofuscada del original
-✅ **Imágenes y videos originales** - Apuntan al servidor original de draisabelmartinez.site
-✅ **Animaciones fluidas** - Efectos pulsing y zooming del original
-
-## 📱 Uso en WordPress
-
-1. Crea una página nueva
-2. Añade un bloque personalizado (HTML custom)
-3. Copia TODO el contenido de `index.html`
-4. Pégalo en el bloque
-5. Publica la página
-
-O simplemente inserta el código usando el plugin `Advanced HTML`
-
-## 🚀 Uso en GoHighLevel (GHL)
-
-1. Ve a tu funnel o página
-2. Añade un elemento `Custom HTML`
-3. Copia TODO el contenido de `index.html`
-4. Pégalo en el editor de HTML
-5. Guarda los cambios
-
-## 🔧 Características técnicas
-
-- **Responsive Design** - Se adapta a mobile, tablet y desktop
-- **Performance** - Preload de recursos críticos, lazy loading de imágenes
-- **SEO** - Meta tags correctos (aunque está marcado como noindex)
-- **Compatibilidad** - Funciona en todos los navegadores modernos
-
-## 📊 Estructura del HTML
+## Estructura
 
 ```
-- Encabezado (meta tags, fonts, preload)
-- Video SmartPlayer (contenedor vturb)
-- CTA Section (botones con animaciones)
-  - Botón superior (pulsing)
-  - Imágenes de beneficios
-  - Botón inferior (zooming)
-- Footer
-- Scripts (SmartPlayer + lógica oculta + Meta Pixel)
+index.html      - Página principal (todo-en-uno)
+README.md       - Este archivo
 ```
 
-## 🎨 Personalización
+## Instalación
 
-Si necesitas cambiar:
+### Opción 1: Servidor Local
+```bash
+cd vsl-v1/
+python -m http.server 8000
+# Abre http://localhost:8000
+```
 
-- **Links del botón** - Busca todas las instancias de `https://pay.hotmart.com/...` 
-- **Imágenes** - Las URLs están claramente marcadas en las etiquetas `<img>`
-- **Textos** - Busca y reemplaza directamente en el HTML
-- **Colores** - Los estilos están en la sección `<style>`
-- **ID del video** - Busca `6933b4be44e4e1560f6e1c5c`
+### Opción 2: WordPress
+1. Crea una página en blanco
+2. Cambia a "Código" (HTML)
+3. Copia y pega todo el contenido de `index.html`
+4. Publica
 
-## ⚡ Notas de rendimiento
+### Opción 3: GoHighLevel / Constructores
+1. Abre un lienzo en blanco
+2. Busca el widget "Código HTML"
+3. Pega el contenido de `index.html`
+4. Guarda
 
-- Las fonts de Google se cargan de forma asincrónica
-- El video usa preload para DNS prefetch
-- Las imágenes usan `loading="lazy"` para carga gradual
-- El CSS es inline para eliminar solicitudes de archivo externo
+## Personalización
 
-## 🔐 Seguridad
+### Cambiar botones (links de compra)
+Busca:
+```
+https://pay.hotmart.com/H102591687A?checkoutMode=10&hidebillet=1&src=VID18l1
+```
 
-- Meta robots está en `noindex, nofollow` (como original)
-- La lógica de JavaScript es ofuscada (protegida)
-- No hay datos sensibles en el HTML
+Reemplaza por tu enlace de Hotmart/Stripe/etc.
 
-## 📝 Información de contacto
+### Cambiar imágenes
+Las imágenes apuntan a:
+```
+https://media.atomicatpages.net/u/wGdxtageg6ehx6YIDoo8fZ0DIMa2/Pictures/[IMAGEN]
+```
 
-Para soporte o preguntas sobre esta implementación, contacta a JuanPa. 🧭
+Si quieres tus propias imágenes, descárgalas y reemplaza las URLs.
+
+### Cambiar video
+El video viene de ConvertAI:
+```
+vturb-smartplayer id="vid-6902b577a83e5df956e6a433"
+```
+
+Para cambiar el video, necesitarás:
+1. Tu propio proyecto en ConvertAI
+2. Reemplazar el ID del player
+3. Reemplazar la URL del stream
+
+### Cambiar colores
+- Botones verdes: `#00be00` → cambia a tu color
+- Headline azul: `#033459` → tu color
+- Busca y reemplaza en la sección `<style>`
+
+## Testing
+
+- ✅ Abre en navegador (Chrome, Firefox, Safari)
+- ✅ Prueba en mobile (responsive)
+- ✅ Verifica que botones redirigen correctamente
+- ✅ Confirma que video carga
+- ✅ Revisa animaciones (pulsing, zooming)
+
+## Notas técnicas
+
+- **CSS inline:** Todo en el `<head>` para máxima compatibilidad
+- **JS externo:** Facebook pixel + scripts de ConvertAI
+- **Imágenes con lazy loading:** `loading="lazy"` para performance
+- **Fonts asincrónicas:** Google Fonts con `onload` trick
+- **Sin dependencias:** No necesita jQuery, Bootstrap, etc.
+
+---
+
+Generado: 2026-02-12
+Clonado desde: https://www.draisabelmartinez.site/ondavid18l1
