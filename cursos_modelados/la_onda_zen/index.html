@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+    <meta name="robots" content="noindex, nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>La Onda Zen - Acceso Directo</title>
+    
+    <!-- Preconexiones para rendimiento -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.converteai.net">
+    <link rel="preconnect" href="https://scripts.converteai.net">
+    <link rel="dns-prefetch" href="https://api.vturb.com.br">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');">
+    
+    <!-- SmartPlayer Preload -->
+    <link rel="preload" href="https://scripts.converteai.net/4747f559-716b-4de7-a2dc-c9d56f7fc903/players/6933b4be44e4e1560f6e1c5c/v4/player.js" as="script">
+    <link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
+    <link rel="preload" href="https://cdn.converteai.net/4747f559-716b-4de7-a2dc-c9d56f7fc903/6933b3cf2200385961f278ab/main.m3u8" as="fetch">
+
+    <style>
+        /* Reset y base */
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        body {
+            font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background-color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+            color: #333;
+        }
+        
+        /* Contenedor principal */
+        .onda-zen-container {
+            width: 100%;
+            max-width: 100%;
+            background-color: #ffffff;
+        }
+        
+        /* Sección del video */
+        .video-section {
+            padding: 3vh 20vw 1vh 20vw;
+            width: 100%;
+            background-color: #ffffff;
+            margin: 0;
+            position: relative;
+        }
+        
+        .video-wrapper {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            display: block;
+        }
+        
+        vturb-smartplayer {
+            display: block !important;
+            width: 100% !important;
+        }
+        
+        #smartplayer {
+            border-radius: 0 !important;
+        }
+        
+        video.smartplayer-video {
+            border-radius: -4px !important;
+        }
+        
+        /* Sección de call-to-action */
+        .cta-section {
+            padding: 0.01vh 20vw 3vh 20vw;
+            width: 100%;
+            background-color: #ffffff;
+            margin: 0;
+            position: relative;
+        }
+        
+        .cta-content {
+            width: 100%;
+            margin: 0;
+        }
+        
+        /* Botón principal con animaciones */
+        .cta-button {
+            background: #00be00;
+            border-radius: 12px;
+            border: none;
+            color: #ffffff;
+            padding: 16px 32px;
+            font-weight: 600;
+            display: block;
+            width: fit-content;
+            text-align: center;
+            margin: 1vh auto 2vh auto;
+            font-size: 1.49vw;
+            box-sizing: border-box;
+            max-width: 100%;
+            transition: all 0.5s ease-in-out;
+            text-decoration: none;
+            font-family: Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            cursor: pointer;
+            display: inline-block;
+        }
+        
+        .cta-button:hover {
+            filter: brightness(1.2);
+        }
+        
+        .cta-button:active {
+            transform: scale(0.98);
+        }
+        
+        /* Animación pulsing */
+        .pulsing {
+            animation: pulsing 1s ease-out infinite;
+        }
+        
+        @keyframes pulsing {
+            0% {
+                box-shadow: 0 0 0 0 rgba(0, 190, 0, 0.88);
+            }
+            80% {
+                box-shadow: 0 0 0 12px rgba(0, 255, 23, 0);
+            }
+        }
+        
+        /* Animación zooming */
+        .zooming {
+            animation: zooming 1.25s ease infinite;
+        }
+        
+        @keyframes zooming {
+            0% {
+                transform: scale(1, 1);
+            }
+            50% {
+                transform: scale(1.1, 1.1);
+            }
+            100% {
+                transform: scale(1, 1);
+            }
+        }
+        
+        /* Subheadline */
+        .subheadline {
+            font-size: 1.65vw;
+            text-align: center;
+            padding-top: 2vh;
+            padding-bottom: 2vh;
+            color: #033459;
+            line-height: 1.1;
+            font-weight: 600;
+            letter-spacing: 0px;
+        }
+        
+        .subheadline h2 {
+            margin: 0;
+            font-size: inherit;
+            color: inherit;
+        }
+        
+        .subheadline b {
+            font-weight: 700;
+        }
+        
+        /* Imágenes */
+        .image-block {
+            text-align: center;
+            margin: 0.25vh auto;
+        }
+        
+        .image-block img {
+            display: block;
+            margin: 0.25vh auto;
+            max-width: 20%;
+            border-radius: 0;
+            border: none;
+            height: auto;
+        }
+        
+        /* Footer */
+        .footer-section {
+            padding: 4vh 20vw 4vh 20vw;
+            width: 100%;
+            background-color: #ffffff;
+            margin: 0;
+            position: relative;
+        }
+        
+        .footer-content {
+            text-align: center;
+            font-size: 1.2vw;
+            color: #000000;
+        }
+        
+        .footer-content a {
+            padding: 0 !important;
+            color: #000000 !important;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+        
+        .footer-content a:hover {
+            opacity: 0.7;
+        }
+        
+        .footer-content p {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .footer-content p + p {
+            margin-top: 4px;
+        }
+        
+        .footer-links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 24px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        
+        /* Responsive - Tablet */
+        @media (max-width: 1200px) {
+            .video-section {
+                padding: 2.25vh 15vw 0.75vh 15vw;
+            }
+            
+            .cta-section {
+                padding: 0.001vh 15vw 2.25vh 15vw;
+            }
+            
+            .cta-button {
+                font-size: 1.69vw;
+                margin: 0.66vh auto 1.5vh auto;
+                padding: 8px 16px;
+            }
+            
+            .subheadline {
+                font-size: 2.5vw;
+                padding-top: 1.5vh;
+                padding-bottom: 1.5vh;
+            }
+            
+            .image-block img {
+                max-width: 18%;
+            }
+            
+            .footer-section {
+                padding: 3vh 15vw 3vh 15vw;
+            }
+            
+            .footer-content {
+                font-size: 1.95vw;
+            }
+        }
+        
+        /* Responsive - Mobile */
+        @media (max-width: 640px) {
+            html {
+                overflow-x: hidden;
+            }
+            
+            .video-section {
+                padding: 3vh 1.5vw 1.5vh 1.5vw;
+            }
+            
+            .cta-section {
+                padding: 0.001vh 1.5vw 0.001vh 1.5vw;
+            }
+            
+            .cta-button {
+                font-size: 3.5vw;
+                padding: 12px 24px;
+                margin: 0.5vh auto 1vh auto;
+            }
+            
+            .subheadline {
+                font-size: 5.6vw;
+                padding-top: 1.5vh;
+                padding-bottom: 1.5vh;
+                text-align: center;
+            }
+            
+            .image-block img {
+                max-width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .footer-section {
+                margin: 0;
+                padding: 3.75vh 1.5vw 0.75vh 1.5vw;
+            }
+            
+            .footer-content {
+                font-size: 3.3vw;
+                text-align: center;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 8px;
+            }
+            
+            .footer-links span {
+                display: none;
+            }
+        }
+        
+        /* Clase oculta */
+        .zyWawY7693486 {
+            display: none !important;
+        }
+        
+        /* Selectable text deshabilitado */
+        .u {
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            cursor: default;
+        }
+    </style>
+</head>
+<body id="ondavid18l2" data-page="ondavid18l2" class="onda-zen-container">
+    
+    <!-- Sección de Video -->
+    <div class="video-section">
+        <div class="video-wrapper">
+            <vturb-smartplayer id="vid-6933b4be44e4e1560f6e1c5c"></vturb-smartplayer>
+        </div>
+    </div>
+    
+    <!-- Sección CTA -->
+    <div class="cta-section">
+        <div class="cta-content">
+            <!-- Botón superior con animación pulsing -->
+            <a href="https://pay.hotmart.com/H102591687A?checkoutMode=10&hidebillet=1&src=VID18l2" target="_blank" class="cta-button pulsing">
+                👉 QUIERO ACCEDER A LA ONDA TRANQUILA
+            </a>
+            
+            <!-- Subheadline -->
+            <div class="subheadline">
+                <h2>Accede <b>HOY MISMO</b> a:</h2>
+            </div>
+            
+            <!-- Imagen 1 -->
+            <div class="image-block">
+                <img loading="lazy" src="https://media.atomicatpages.net/u/wGdxtageg6ehx6YIDoo8fZ0DIMa2/Pictures/JEzuXa7993693.webp" alt="Beneficios La Onda Zen">
+            </div>
+            
+            <!-- Imagen 2 -->
+            <div class="image-block">
+                <img loading="lazy" src="https://media.atomicatpages.net/u/wGdxtageg6ehx6YIDoo8fZ0DIMa2/Pictures/PAnxLu7993693.webp" alt="Lo que incluye La Onda Zen">
+            </div>
+            
+            <!-- Botón inferior con animación zooming -->
+            <a href="https://pay.hotmart.com/H102591687A?checkoutMode=10&hidebillet=1&src=VID18l2" target="_blank" class="cta-button zooming">
+                👉 QUIERO ACCEDER A LA ONDA TRANQUILA
+            </a>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <div class="footer-section">
+        <div class="footer-content">
+            <p><strong>Copyright 2026 – Dra. Isabel Martínez ®</strong></p>
+            <p>Todos los derechos reservados</p>
+            <div class="footer-links">
+                <a id="t" href="#" target="_blank">Términos de uso</a>
+                <span>·</span>
+                <a id="p" href="#" target="_blank">Privacidad</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- SmartPlayer Script -->
+    <script src="https://scripts.converteai.net/4747f559-716b-4de7-a2dc-c9d56f7fc903/players/6933b4be44e4e1560f6e1c5c/v4/player.js" async defer></script>
+    
+    <!-- Script de lógica oculta -->
+    <script>
+var _0x236efe=_0x14f8;!function(){for(var n=_0x14f8,r=_0x78cb();;)try{if(824552===parseInt(n(324))/1*(-parseInt(n(314))/2)+parseInt(n(341))/3+-parseInt(n(317))/4*(-parseInt(n(307))/5)+parseInt(n(358))/6*(-parseInt(n(357))/7)+parseInt(n(356))/8+-parseInt(n(303))/9*(parseInt(n(305))/10)+-parseInt(n(331))/11)break;r.push(r.shift())}catch(n){r.push(r.shift())}}();var _0xf19264=_0x236efe(326),_0x2cc320=!1,_0xa72d88=1361;function _0x1ea4f2(){var n,r=_0x236efe,t=(n=!0,function(r,t){var e=n?function(){if(t){var n=t[_0x14f8(343)](r,arguments);return t=null,n}}:function(){};return n=!1,e});const e=window[r(351)][r(310)]+window[r(351)][r(339)]+r(322),f=window[r(351)][r(310)]+window.location[r(339)]+r(348);document[r(327)]("p")&&document[r(327)]("p")[r(354)](r(313),e),document.getElementById("t")&&document[r(327)]("t")[r(354)](r(313),f),_0x183552();var a=r(298),o=0,u=[],v=!1,i=document[r(333)](a),c=r(340)+_0xa72d88,x=localStorage[r(315)](c);setTimeout((function(){var n=r;u=Array.prototype[n(350)].call(i)}),0);var s=function(){var n=r;v=!0,u.forEach((r=>r[n(366)].remove(a))),_0x2ce783(),localStorage.setItem(c,!0)},w=function(){var n=r;if(t(this,(function(){var n,r,t,e=_0x14f8,f=function(){var n,r=_0x14f8;try{n=Function("return (function() "+r(368)+");")()}catch(r){n=window}return n}(),a=new RegExp("[RNyPgCVokoJZCORNPIhpvcSLToTBMLvhxVZIJWJpGRUMBPWyfJDEpUZOApYPSLNX]","g"),o=e(330)[e(342)](a,"").split(";"),u=function(n,r,t){var f=e;if(n.length!=r)return!1;for(var a=0;a<r;a++)for(var o=0;o<t[f(320)];o+=2)if(a==t[o]&&n[f(308)](a)!=t[o+1])return!1;return!0},v=function(n,r,t){return u(r,n,t)},i=function(n,r,t){return v(r,n,t)};for(var c in f)if(u(c,8,[7,116,5,101,3,117,0,100])){n=c;break}for(var x in f[n])if(i(x,[5,110,0,100],6)){d=x;break}for(var s in f[n])if(i(s,[7,110,0,108],8)){r=s;break}if(!("~">d))for(var w in f[n][r])if(v([7,101,0,104],w,8)){t=w;break}if(n&&f[n]){var y=f[n][d],L=!!f[n][r]&&f[n][r][t],m=y||L;if(m){for(var z=!1,B=0;B<o[e(320)];B++){var d,_=(d=o[B])[0]===String[e(363)](46)?d[e(350)](1):d,C=m[e(320)]-_[e(320)],p=m.indexOf(_,C);-1!==p&&p===C&&(m[e(320)]==d[e(320)]||0===d[e(328)]("."))&&(z=!0)}if(!z){var l=new RegExp(e(347),"g"),g=e(309).replace(l,"");f[n][r]=g}}}}))(),typeof smartplayer===n(337)||!smartplayer.instances||!smartplayer[n(302)].length){if(o>=10)return;return o+=1,setTimeout((function(){w()}),1e3)}console.log(smartplayer[n(302)]);var e=function(){var n=r;if(smartplayer.instances[n(320)]>1){let r=smartplayer.instances[n(349)]((r=>r[n(323)].id===_0xf19264));return!r&&_0x2cc320&&(r=smartplayer.instances[n(349)]((r=>r?.container?.[n(367)]?.[n(301)]?.[n(359)](_0xf19264)||r?.[n(311)]?.[n(334)]?.[n(301)]?.[n(359)](_0xf19264)))),r}return smartplayer[n(302)][0]}();e.on("timeupdate",(()=>{var r=n;v||e[r(321)]||(console[r(304)](r(332)+e[r(369)].currentTime+r(346)+_0xa72d88),e[r(369)][r(362)]<_0xa72d88||s())}))};x===r(344)?setTimeout((function(){s()}),100):w();let y=document[r(364)](r(300))[0];y&&y.classList[r(338)]("u"),document[r(299)](r(312),(function(n){var t=r;n[t(365)]&&n[t(353)]()})),document[r(336)]=function(n){if(123==n[r(360)])return!1},document.addEventListener(r(325),(n=>n[r(353)]()))}function _0x14f8(n,r){var t=_0x78cb();return _0x14f8=function(r,e){var f=t[r-=298];if(void 0===_0x14f8.ekzERs){_0x14f8.zBPdyv=function(n){for(var r,t,e="",f="",a=0,o=0;t=n.charAt(o++);~t&&(r=a%4?64*r+t:t,a++%4)?e+=String.fromCharCode(255&r>>(-2*a&6)):0)t="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=".indexOf(t);for(var u=0,v=e.length;u<v;u++)f+="%"+("00"+e.charCodeAt(u).toString(16)).slice(-2);return decodeURIComponent(f)},n=arguments,_0x14f8.ekzERs=!0}var a=r+t[0],o=n[a];return o?f=o:(f=_0x14f8.zBPdyv(f),n[a]=f),f},_0x14f8(n,r)}function _0x2ce783(){var n=_0x236efe;document[n(333)](n(298)).forEach((r=>r.classList[n(335)](n(316))))}function _0x78cb(){var n=["y29UDgfPBMvY","A2v5zg93BG","AhjLzG","mZi5otu4zNvysvLR","z2v0sxrLBq","ENLxyxDznZy5mZq4nG","offfzu1brW","zM9YrwfJAa","lMLTywDLx2PnDhnzCdGWmJy1nJq","BgvUz3rO","C21HCNrbDxrVugXHEq","l3bYAxzHy2LKywrL","B3b0Aw9UCW","nevSzxPTAW","y29UDgv4Dg1LBNu","nJKZm2i0yMu0ngu0zte1nJbMnMuXyZvJ","z2v0rwXLBwvUDej5swq","Aw5KzxHpzG","CMvHzhLtDgf0zq","uND3DY5KCK55ugfPz3nHq2jLBfzTB2fRCNrPB25LEI5ZsMLAq09stLb0swHLChzJu0XuB1rctuX2AhHwwKLkv0PWr1jvtujqv3LMsKrfCfvAt0fWwvbtte5y","nde4nJGYmgXHBxbxrG","y3vYCMvUDfrPBwuGpt4G","CxvLCNLtzwXLy3rVCKfSBa","BMv4DfnPyMXPBMC","CMvTB3zL","B25RzxLKB3DU","Dw5KzwzPBMvK","ywrK","Cgf0Ag5HBwu","ywXYzwfKEuvSC0rPC3bSyxLLza","mZa2nJu5n1vnvxj2yG","CMvWBgfJzq","yxbWBhK","Dhj1zq","zMXVB3i","ifnfq09orfnFve9FreLtueXbwsa9pIa","w1njquvxvhP6rNfqt1jArM1iwKrQsLDXAwHys1zPxq","l3rLCM1VCW","zMLUza","C2XPy2u","Bg9JyxrPB24","y2XPy2S","ChjLDMvUDerLzMf1Bhq","C2v0qxr0CMLIDxrL","re9nq29UDgvUDeXVywrLza","ody5mZuWneL6t3foDq","mtG2nZm2ouPXB2XwqG","mZbkBujqq3u","Aw5JBhvKzxm","A2v5q29Kzq","lMLTywDLx2v0yLLMCdy3ntGYnJm","y3vYCMvUDfrPBwu","zNjVBunOyxjdB2rL","z2v0rwXLBwvUDhncEvrHz05HBwu","y3rYBeTLEq","y2XHC3nmAxn0","BMv4DevSzw1LBNrtAwjSAw5N","E30Uy29UC3rYDwn0B3iOiNjLDhvYBIb0AgLZiIKOicK","DMLKzw8","lNP5v2f3wtC2otm0ody","ywrKrxzLBNrmAxn0zw5LCG","yM9KEq","B3v0zxjive1m","Aw5ZDgfUy2vZ","mtK4AgjtB2Pe","Bg9N","mZK0mdb5ExzksKm","Bg9HzgLUzW","mJK0mtC5me1NyLLNBW","y2HHCKnVzgvbDa","ywjtsuffv1rVDxP0EJPIBezXyvbUA09swKzTsfPeAKPxCwLOweTwAq","B3jPz2LU"];return(_0x78cb=function(){return n})()}function _0x1a6a1d(n,r){return Math[_0x236efe(345)](Math.random()*(r-n+1)+n)}function _0x183552(){var n=_0x236efe;document[n(333)](n(319))[n(318)]((r=>{var t=n;r[t(299)]("click",(function(){var n=t;window.location[n(313)]=""}))})),document[n(333)](n(361))[n(318)]((r=>{var t=n;r.addEventListener(t(352),(function(){var n=t;window[n(351)][n(313)]=""}))}))}_0x236efe(306)!==document[_0x236efe(329)]?_0x1ea4f2():document[_0x236efe(299)](_0x236efe(355),(function(){_0x1ea4f2()}));
+    </script>
+    
+    <!-- Meta Pixel (Facebook) -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1478783999895102');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1478783999895102&ev=PageView&noscript=1">
+    </noscript>
+
+</body>
+</html>
